@@ -1,8 +1,15 @@
 import React from 'react';
 
-const Congrats = () => {
+const Congrats = (props) => {
     return(
-        <div></div>
+        props.success === true ? 
+            <div data-test = "component-congrats">
+                <span data-test = "congrats-message">
+                    Congratulations! You guessed the word!
+                </span>
+            </div>
+        :
+        <div data-test = "component-congrats"></div>
     );
 }
 
